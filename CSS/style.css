@@ -1,0 +1,81 @@
+/* Esto es un comentario
+
+elemento {
+      propiedad: valor::after
+}
+
+
+*/
+
+main{ 
+    background-image: url(../imagenes/Fondo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+
+h1 {
+    background-color: grey; 
+    font-size: 100px;
+    font-family: 'Delicious Handrawn', cursive;
+    
+
+    
+}
+
+p {
+    display: inline-block;
+    position: absolute;
+     top: 10px;
+     font-family: 'Delicious Handrawn', cursive ;
+     color: yellow;
+     font-size: 100px;
+
+}
+
+li {
+    background-color: grey;
+    font-size: 30px;
+    display: inline;
+    position: relative;
+
+    left: 1250px;
+    bottom: 105px;
+
+
+    
+}
+
+
+
+ p1 {
+     color: black;
+     font-size: 25px;
+     font-family: 'Delicious Handrawn', cursive;
+
+ }
+
+ p2 {
+     color: black;
+     font-size: 25px;
+     font-family: 'Delicious Handrawn', cursive;
+ }
+
+ p3 {
+     color: black;
+     font-size: 25px;
+     font-family: 'Delicious Handrawn', cursive;
+ }
+
+ p4 {
+      color: black;
+      font-size: 25px;
+      font-family: 'Delicious Handrawn', cursive;
+
+ }
+ footer{
+    background-color: burlywood;
+ }
+
+
