@@ -2,240 +2,52 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="parrafo">
-  <meta name="keywords" content="Uñas,Nails,diseño">
-  <title>Devils Diva Nails</title>
-
-  <link rel="shortcut icon" href="img/LogoP.png" type="image/x-icon">
-
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-  <!-- CSS -->
-  <link rel="stylesheet" href="css/style.css">
-  <!--Google Fonts-->
-  <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque&display=swap" rel="stylesheet">
-  <!--Font Awesome -->
-  <script src="https://kit.fontawesome.com/3d9665aa39.js" crossorigin="anonymous"></script>
-
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculador de tiempo</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-  <header>
-    <nav class="navbar navbar-expand-lg bg-nc">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">
-          <img class="w-50" src="img/LogoP.png" alt="Logotipo">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse menu" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link active text-white" aria-current="page" href="index.html">Inicio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-white" href="tienda.html">Tienda</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-white" href="productos.html">Productos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-white" href="sobremi.html">Sobre Mi</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-white" href="contacto.html">Contacto</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </header>
+    <div>
+        <!---->
+        <h1>Calculador de tiempo:</h1>
+        <form>
+            <label for="txtValorUno">Duracion de pelicula:</label>
+            <input type="text" id="txtValorUno" />
+            <br>
+            <label for="txtValorDos">Cocina:</label>
+            <input type="text" id="txtValorDos" />
+            <br>
+            <label for="checkBox1">Tareas</label>
+            <input type="checkbox" id="checkBox1" />
+            <br>
+            <label for="txtValorTres">Sueño:</label>
+            <input type="text" id="txtValorTres" />
+            <p>Por defecto el tiempo se calcula en horas </p>
+            <label for="checkBox2">Calcular horas en dias</label>
+            <input type="checkbox" id="checkBox2" />
+            <br>
+            <input type="button" value="Calcular tiempo" id="btn" class="button" />
+            <br>
+            <input type="button" value="Guardar tiempo" id="btn2" class="button" />
+            <br>
+            <input type="button" value="Ver Ultimo Tiempo Guardado" id="btn3" class="button" />
+            <br>
+            <input type="button" value="Ver Todos los Tiempos Guardados" id="btn4" class="button" />
+            <br>
+            <div id="divMostrarResultado"></div>
+        </form>
+        <div id="divAutor">
+            <span>Creado por</span>
+            <a href="https://github.com/NicolasNCaruso/Entregable1-Caruso.git">Nicolas Caruso</a>
 
-
-  <main>
-    <div id="carouselExampleCaptions" class="carousel slide">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="img/carruseluno.jpg" class="d-block carrusel" alt="primer slide">
-          <div class="carousel-caption d-none d-md-block">
-            <h3 class="cr-titulo">Bienvenid@s a Devil Diva Nails</h3>
-            <p class="cr-texto">Productos y Diseños de uñas aqui</p>
-            <a href="productos.html">
-              <button type="button" class="btn btn-warning">Mas Detalles Aqui</button>
-            </a>
-          </div>
+            
         </div>
-        <div class="carousel-item">
-          <img src="img/carruseldos.jpg" class="d-block carrusel" alt="segundo slide">
-          <div class="carousel-caption d-none d-md-block">
-            <h3 class="cr-titulo">Tienda</h3>
-            <p class="cr-texto">Ver Tienda Aqui.</p>
-            <a href="tienda.html">
-              <button type="button" class="btn btn-warning">Mas Detalles Aqui</button>
-            </a>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img src="img/carruseltres.jpg" class="d-block carrusel" alt="tercer slide">
-          <div class="carousel-caption d-none d-md-block">
-            <h3 class="cr-titulo">Tiene preguntas o dudas?</h3>
-            <p class="cr-texto">Contactenos.</p>
-            <a href="contacto.html">
-              <button type="button" class="btn btn-warning">Mas Informacion Aqui</button>
-            </a>
-          </div>
-        </div>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-        data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-        data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
     </div>
-  </main>
-
-  <section class="text-center site-diseños">
-    <h2 class="diseñoTitulo">Diseños</h2>
-    <div class="flex-grid">
-      <div class="d-col-4 t-col-4 m-col-12">
-        <div class="card" style="width: 18rem;">
-          <img src="img/diseño.jpg" class="card-img-top" alt="">
-          <div class="card-body">
-            <h5 class="card-title">Diseños de Kapping #1</h5>
-            <p class="card-text">Aca tenemos los principales diseños usados por las clientas frecuentes.</p>
-            <a href="tienda.html" class="btn btn-primary">Ver mas diseños aqui</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="d-col-4 t-col-4 m-col-12">
-        <div class="card" style="width: 18rem;">
-          <img src="img/diseñodos.jpg" class="card-img-top" alt="">
-          <div class="card-body">
-            <h5 class="card-title">Diseños de Esmaltadas #2</h5>
-            <p class="card-text">Segunda tanda de diseños mas pedidos para mis clientas frecuentes</p>
-            <a href="tienda.html" class="btn btn-primary">Ver mas diseños aqui</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="d-col-4 t-col-4 m-col-12">
-        <div class="card" style="width: 18rem;">
-          <img src="img/diseñotres.jpg" class="card-img-top" alt="">
-          <div class="card-body">
-            <h5 class="card-title">Diseños de Semi-permanente #3</h5>
-            <p class="card-text">Aca tenemos unos de los primeros diseños usados por las clientas.</p>
-            <a href="tienda.html" class="btn btn-primary">Ver mas diseños aqui</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="container mt-3">
-    <div class="galeria-titulo">
-      <h3>Tienda</h3>
-    </div>
-    <div class="gallery">
-      <figure id="square" class="zoomIn animated">
-        <img src="img/esculpidados.jpg" alt="unsplash image" />
-      </figure>
-      <figure>
-        <img src="img/esculpidatres.jpg" alt="unsplash image" />
-      </figure>
-      <figure>
-        <img src="img/kappinguno.jpg" alt="unsplash image" />
-      </figure>
-      <figure>
-        <img src="img/kappingdos.jpg" alt="unsplash image" />
-      </figure>
-      <div class="btn-tienda">
-        <a href="tienda.html" class="btn btn-warning ">Ver tienda aqui</a>
-      </div>
-    </div>
-  </section>
-
-  <footer class="site-footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12 col-md-6">
-          <h6>Nosotros</h6>
-          <p class="text-justify">
-            Devil Diva Nails es un emprendimiento de una chica llamada Luciana Berra la cual quiere ingresar en el mundo
-            de la belleza en las manos, cree este emprendimiento porque me gusta el arte y me gusta mostrarlo en las
-            manos y ojos de mis clientas/es
-          </p>
-        </div>
-
-        <!-- <div class="col-xs-6 col-md-3">
-          <h6>Categories</h6>
-          <ul class="footer-links">
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-          </ul>
-        </div> -->
-
-        <div class="col-xs-6 col-md-3">
-          <h4>Menu</h4>
-          <ul class="footer-links">
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-            <li><a href="productos.html">Productos</a></li>
-            <li><a href="sobremi.html">Sobre Mi</a></li>
-            <li><a href="materiales.html">Tienda</a></li>
-          </ul>
-        </div>
-      </div>
-      <hr>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8 col-sm-6 col-xs-12">
-          <p class="copyright-text">Copyright &copy; 2023 Todos los derechos reservados
-            <a href="#">Devil Diva Nails</a>.
-          </p>
-        </div>
-
-        <div class="col-md-4 col-sm-6 col-xs-12">
-          <ul class="social-icons">
-            <li><a class="instragram" href="https://instagram.com/devil_diva.nails?igshid=MzRlODBiNWFlZA=="
-                target="_blank"><i class="fa-brands fa-instagram"></i>
-              </a>
-            </li>
-            <li><a class="instragram" href=""><i class="fa-brands fa-whatsapp"></i>
-              </a>
-            </li>
-            <li><a class="instragram" href="https://github.com/NicolasNCaruso" target="_blank"><i
-                  class="fa-brands fa-github"></i>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-
-  <!--Bootstrap JS-->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">
-    </script>
-
+    <script src="js/User Interface.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
