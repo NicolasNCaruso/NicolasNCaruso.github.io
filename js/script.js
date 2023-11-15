@@ -43,62 +43,7 @@ class Tiempos{
     }
 }
 //Agregar a la lista
-function guardarTiempoDAYS(pHorasTotal,pHorasMinutos, pHorasSueño) {
-    let nuevoTiempoDAYS = new Tiempos();
-    nuevoTiempoDAYS.horasTotal = `DAYS ${pHorasTotal}`;
-    nuevoTiempoDAYS.horasMinutos = `DAYS ${pHorasMinutos}`;
-    nuevoTiempoDAYS.horasSueño = `DAYS ${pHorasSueño}`;
-    TiemposGuardadas.push (nuevoTiempoDAYS);
-}
-function guardarTiempoHRS(pHorasTotal,pHorasMinutos, pHorasSueño) {
-    let nuevoTiempoHRS = new Tiempos();
-    nuevoTiempoHRS.horasTotal = `HRS ${pHorasTotal}`;
-    nuevoTiempoHRS.horasMinuto = `HRS ${pHorasMinutos}`;
-    nuevoTiempoHRS.horasSueño = `HRS ${pHorasSueño}`;
-    TiemposGuardadas.push (nuevoTiempoHRS);
-}
-function verHorasTotalesdelUltimoTiempo(pLista){
-    let verHorasTotalesdelUltimoTiempo;
-    for (let i=pLista.length-1;i <=pLista.length-1; i++){
-        let Horas = pLista[i];
-        if (Horas !== undefined) verHorasTotalesdelUltimoTiempo= Horas.horasTotales;
-    }
-    return verHorasTotalesdelUltimoTiempo;
-}
-function verhorasSueñoUltimoTiempo(pLista){
-    let horasSueñoUltimoTiempo = 0;
-    for (let i=pLista.length-1;i <=pLista.length-1; i++){
-        let horas = pLista[i];
-        if (horas !== undefined) horasSueñoUltimoTiempo = horas.horasSueño;
-    }
-    return horasSueñoUltimoTiempo;
-}
-function verhorasMinutosUltimoTiempo(pLista){
-    let horasMinutosUltimoTiempo = 0;
-    for (let i=pLista.length-1;i <=pLista.length-1; i++){
-        let horas = pLista[i];
-        if (horas !== undefined) horasMinutosUltimoTiempo = horas.horasMinutos;
-    }
-    return horasMinutosUltimoTiempo;
-}
 
-function VerTodosLosTiemposGuardados(pLista){
-    let mostrar = "";
-    for (let i=0; i < pLista.length; i++){
-        let tiempo = pLista[i];
-        mostrar += `Tiempo ${tiempo.numero}: <br>
-                    Las horas de Duracion es: ${tiempo.horasDuracion} <br>
-                    Las horas de Minutos es: ${tiempo.horasMinutos}. <br>
-                    Las horas de Sueño es: ${tiempo.horasSueño} <br>`
-        }
-        return mostrar;
-}
-
-function guardarDatosLocalStorage(pHorasTotales, pMinutos, pSueño){
-    localStorage.horasTotales = pHorasTotales;
-    localStorage.minutos = pMinutos;
-    localStorage.sueño = pSueño;
-}
 
 function recuperarDatosLocalStorage() {
     if ((localStorage.horasTotales !== undefined) && (localStorage.cocina !== undefined) && localStorage.sueño !== undefined) {
@@ -121,8 +66,3 @@ function error(err) {
 }
 
 // Solicitud GET (Request).
-fetch('https://github.com/NicolasNCaruso/Entregable1-Caruso.git')
-    // Exito
-    .then(response => response.json())  // convertir a json
-    .then(json => console.log(json))    //imprimir los datos en la consola
-    .catch(err => console.log('Solicitud fallida', err)); // Capturar errores
