@@ -69,7 +69,8 @@ function userInterfaceGuardarTiempo(){
         let minutos = Number(tareas, duracionN, horasN);
         let sueño= Number(duracionN);
         let horasTotal = minutos + sueño + cocina + duracion;
-        if (horasDAYS == true) {
+    }
+    if (horasDAYS == true) {
             minutos = (minutos/60)
             sueño = (sueño/60)
             let horasTotalDAYS = minutos + sueño;
@@ -83,6 +84,7 @@ function userInterfaceGuardarTiempo(){
             guardarTiempoHRS(horasTotal.toFixed(2), minutos, sueño, cocina, duracion);
             mensaje = `Se guardo el tiempo correctamente en HRS.`;
             //Local storage
-            guardarDatosLocalStorage(horasTotal.toFixed(2),minutos, sueño, cocina, duracion);
+            guardarDatosLocalStorage(horasTotal.toFixed(2),minutos, sueño, duracion);
             recuperarDatosLocalStorage();
         } 
+    }
