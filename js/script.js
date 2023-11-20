@@ -65,4 +65,3 @@ function error(err) {
     console.log('Solicitud fallida', err); //los detalles en el objecto "err"
 }
 
-// Solicitud GET (Request).
