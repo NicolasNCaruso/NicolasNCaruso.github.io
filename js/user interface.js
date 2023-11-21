@@ -21,28 +21,29 @@ function userInterfaceCalculadorTiempo(){
         let horasN = Number(horas);
         let minutos = Number(tareas, cocinaN, horasN);
         let sueño= Number(horasN);
-        let horasTotalHRS = minutos + sueño + cocina + duracion;
+        let horasTotalHRS = tareas + sueño + cocina + duracion;
         if (horasDAYS == true) {
-            minutos = (minutos/60)
-            sueño = (sueño/8)
+            tareas = (tareas/1)
+            sueño = (sueño/1)
             cocina = (cocina/1)
-            duracion =(duracion/3)
+            duracion =(duracion/1)
 
             let horasTotalDAYS= minutos + sueño + cocina + duracion;
-            mensaje = `El Horas total en DAYS es de DAYS ${horasTotalDAYS.parseInt(0)}. <br>
-            Incluye DAYS ${minutos.parseInt(0)} correspondiente a minutos <br>
-            Incluye DAYS ${sueño.parseInt(0)} correspondiente a sueño <br>
-            Incluye DAYS ${cocina.parseInt(0)} correspondiente a cocina <br>
-            Incluye DAYS ${duracion.parseInt(0)} correspondiente a duracion `; 
+            mensaje = `El Horas total en DAYS es de DAYS ${horasTotalDAYS.toFixed(0)}. <br>
+            Incluye DAYS ${minutos.toFixed(0)} correspondiente a tareas <br>
+            Incluye DAYS ${sueño.toFixed(0)} correspondiente a sueño <br>
+            Incluye DAYS ${cocina.toFixed(0)} correspondiente a cocina <br>
+            Incluye DAYS ${duracion.toFixed(0)} correspondiente a duracion `; 
         }
         else  {
+            
 
         let horasTotalHRS= minutos + sueño + cocina + duracion;
-            mensaje = `Las horas totales en HRS es de  HRS ${horasTotalHRS.parseInt(0)}. <br> 
-            Incluye HRS ${minutos.parseInt(0)} correspondiente a minutos  <br>
-            Incluye HRS ${sueño.parseInt(0)} correspondiente a sueño <br>
-            Incluye HRS ${cocina.parseInt(0)} correspondiente a cocina <br>
-            Incluye HRS ${duracion.parseInt(0)} correspondiente a durecion `;
+            mensaje = `Las horas totales en HRS es de  HRS ${horasTotalHRS.toFixed(1)}. <br> 
+            Incluye HRS ${minutos.toFixed(1)} correspondiente a tareas  <br>
+            Incluye HRS ${sueño.toFixed(1)} correspondiente a sueño <br>
+            Incluye HRS ${cocina.toFixed(1)} correspondiente a cocina <br>
+            Incluye HRS ${duracion.toFixed(1)} correspondiente a durecion `;
             
             
         }
@@ -71,20 +72,23 @@ function userInterfaceGuardarTiempo(){
         let horasTotal = minutos + sueño + cocina + duracion;
     }
     if (horasDAYS == true) {
-            minutos = (minutos/60)
-            sueño = (sueño/60)
-            let horasTotalDAYS = minutos + sueño;
-            guardariTempoDAYS(horasTotalDAYS.parseInt(2),minutos, sueño, cocina, duracion);
+            minutos = (minutos/0)
+            sueño = (sueño/0)
+            duracion = (duracion/0)
+            cocina = (cocina/0)
+            let horasTotalDAYS = minutos + sueño + duracion + cocina ;
+            guardariTempoDAYS(horasTotalDAYS.toFixed(2),minutos, sueño, cocina, duracion);
             mensaje = `Se guardo el tiempo correctamente en DAYS.`;
             //Local storage
-            guardarDatosLocalStorage(horasTotalDAYS.parseInt(2),minutos, sueño, cocina, duracion);
+            guardarDatosLocalStorage(horasTotalDAYS.toFixed(2),minutos, sueño, cocina, duracion);
             recuperarDatosLocalStorage();
         }
         else {
             guardarTiempoHRS(horasTotal.toFixed(2), minutos, sueño, cocina, duracion);
             mensaje = `Se guardo el tiempo correctamente en HRS.`;
             //Local storage
-            guardarDatosLocalStorage(horasTotal.toFixed(2),minutos, sueño, duracion);
+            guardarDatosLocalStorage(horasTotal.toFixed(2),minutos, sueño, cocina, duracion);
             recuperarDatosLocalStorage(); 
         } 
     }
+    
