@@ -79,6 +79,7 @@ function userInterfaceGuardarTiempo(){
             //Local storage
             guardarDatosLocalStorage(horasTotalDAYS.toFixed(2),minutos, sueño, cocina, duracion);
             recuperarDatosLocalStorage();
+            SetrecuperarDatosLocalStorage();
         }
         else {
             guardarTiempoHRS(horasTotalHRS.toFixed(2), minutos, sueño, cocina, duracion);
@@ -86,6 +87,7 @@ function userInterfaceGuardarTiempo(){
             //Local storage
             guardarDatosLocalStorage(horasTotalHRS.toFixed(2),minutos, sueño, cocina, duracion);
             recuperarDatosLocalStorage();
+            SetrecuperarDatosLocalStorage();
         }
     }
     else {
